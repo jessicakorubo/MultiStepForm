@@ -1,0 +1,412 @@
+:root {
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+body {
+    overflow-x: hidden;
+}
+.content-card h4 {
+    color: var(--marine-blue);
+}
+.content-card p {
+    color: var(--cool-gray);
+}
+label {
+    color:var(--marine-blue)
+}
+.num {
+    padding: 0.2rem;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+a.num {
+    text-decoration: none;
+    color: white;
+}
+.numcontent h4 {
+    color: var(--light-gray);
+    font-size: 12px;
+}
+a.num:hover {
+    background-color: var(--light-blue);
+    color: var(--marine-blue);
+    border: none;
+}
+.personalInfo p {
+    margin-top: 1rem;
+}
+
+/* GENERAL PLAN DOCUMENT */
+.personalPlan {
+    margin-bottom: 2rem;
+}
+
+.button-div a {
+    float: right;
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    color: var(--white);
+    background-color: var(--marine-blue);
+    border-radius: 5px;
+    border: none;
+}
+
+.button-div-plan a {
+    float: right;
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    color: var(--white);
+    background-color: var(--marine-blue);
+    border-radius: 5px;
+    border: none;
+}
+.button-div-plan a:hover {
+    background-color: blueviolet;
+}
+.plan-go-back{
+    width: fit-content;
+}
+.plan-go-back a {
+    text-decoration: none;
+    color: var(--cool-gray);
+    padding: 1rem 0;
+    font-weight: 900;  
+}
+.plan-go-back a:hover {
+    color: var(--marine-blue);
+}
+.yearly {
+    display: none;
+}
+.plan.active {
+    background-color: hsla(206, 94%, 87%,0.2);
+    border-color: var(--cool-gray);
+}
+.plan:hover {
+    cursor: pointer;
+    border-color: var(--cool-gray);
+}
+
+/* GENERAL ADD-ONS DOCUMENT */
+.addOnsService {
+    margin-top: 2rem;
+}
+.addOn {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border:1px solid var(--marine-blue);
+    display: flex;
+    align-items: center;
+}
+.addOn.active {
+    background-color: var(--light-gray);
+    border: 2px solid var(--marine-blue);
+}
+.checkbox {
+    margin-right: 15px;
+}
+.serviceFloat {
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+}
+.timePeriod p {
+    font-weight: 900;
+    color: var(--purplish-blue);
+}
+
+/* GENERAL FINISHING DOCUMENT */
+.summary {
+    background-color: hsla(229, 24%, 87%,0.3);
+    border-radius:10px;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.result {
+    width: 100%;
+    display: flex;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+}
+.price p {
+    font-weight: 800;
+    color: var(--marine-blue);
+}
+.addOnOption {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.addOnOption h5 {
+    color: var(--cool-gray);
+}
+.addOnOption p {
+    color: var(--marine-blue);
+}
+.total {
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+p#totalPrice {
+    font-size: 18px;
+    color: var(--purplish-blue);
+    font-weight: 700;
+}
+.thank-you-content {
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 20% 10%;
+}
+.thank-you-content * {
+    margin-top: 1rem;
+}
+.thank-you-content h1 {
+    color: var(--marine-blue);
+}
+.thank-you-content img {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+.thank-you {
+    margin-bottom: 2rem;
+}
+/* Desktop version */
+@media screen and (min-width: 850px)  {
+    body {
+        position: relative;
+        background-color: var(--light-gray);
+    }
+    .background-blue-info {
+        border-radius: 10px;
+        background-image: url(images/bg-sidebar-desktop.svg);
+        background-position: center;
+        height: 100%;
+        width: 19vw;
+        padding: 1.5rem;
+    }
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        width: 70vw;
+        position: absolute;
+        margin-top: 5rem; 
+        left: 50%;
+        transform: translate(-50%, 50%);
+        background-color: var(--white);
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 40% 50%;
+        grid-template-rows: 1;
+        /* column-gap: 2%; */
+        border-radius: 10px;
+    }
+    .number {
+        display: flex;
+        margin-top: 1rem;
+    }
+    .numcontent {
+        display: block;
+        position: relative;
+        bottom: 0.3rem;
+        margin-left: 1rem;
+    }
+    .numcontent p {
+        color: var(--white);
+        font-size: 13px;
+    }
+    .numbers {
+        display: flex;
+        flex-direction: column;
+    }
+    .content-card {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .form{
+        margin-top: 2rem;
+    }
+    .form input{
+        padding: 0.8rem 0.5rem;
+        margin-top: 0.3rem;
+        margin-bottom: 0.8rem;
+    }
+    input {
+        width:100%;
+        padding: 0.5rem;
+        border-radius: 5px;
+        outline-color: var(--strawberry-red);
+        border: 0.2px solid black;
+    }
+    .button-div {
+        margin-top: 3rem;
+    }
+    .button-div a:hover {
+        background-color: var(--purplish-blue);
+    }
+
+    /* DESKTOP PLAN DOCUMENT */
+    .plans {
+        display: flex;
+        text-align: left;
+        justify-content: left;
+        column-gap: 1rem;
+    }
+    .plan {
+        border: 1px solid var(--light-blue);
+        padding: 1rem;
+        text-align: left;
+        border-radius: 10px;
+        width: 8rem;
+    }
+    .plan-go-back {
+        position: relative;
+        top:0.5rem;
+    }
+    .icons {
+        margin-bottom: 1.5rem;
+    }
+    .icons img {
+        width: 43px;
+        height: 30px;
+    }
+    .navbuttons {
+        margin-top: 4rem;
+    }
+    .buttonInfoNext {
+        margin-top: 2rem;
+    }
+    
+    /* DESKTOP ADD-ONS DOCUMENT */
+
+    /* DESKTOP FINISHING DOCUMENT */
+    
+    /* DESKTOP THANK YOU DOCUMENT */
+    
+}
+
+
+
+/* Mobile version */
+@media screen and (max-width:849px) {
+    .numbers {
+        display: flex;
+        justify-content: center;
+        column-gap: 1rem;
+        align-content: center;
+        padding-top: 2rem
+    }
+    .numcontent {
+        display: none;
+    }
+    .background-blue-info {
+        background-image: url(images/bg-sidebar-mobile.svg);
+        width: 100vw;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 32vh;
+    }
+    input{
+        width: 95%;
+        padding: 0.5rem;
+        font-size: 16px;
+        border: 1px solid var(--light-gray);
+    }
+    .form{
+        margin-top: 2rem;
+    }
+    .content-card {
+        position: relative;
+        bottom: 5rem;
+        padding: 1.5rem 1.5rem 0 1.5rem;
+        background-color:var(--white);
+        width: 90%;
+        height: max-content;
+        margin: auto;
+        border-radius:20px;
+    }
+
+    .backgroundcolor {
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: var(--light-gray);
+        height:  66vh;
+    }
+    .content-card input {
+        margin-bottom: 1rem;
+    }
+    .button-div{
+        height: 4rem;
+        position: relative;
+        top:23vh;
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    /* MOBILE PLAN DOCUMENT */
+    .plan{
+        display: flex;
+        margin-bottom: 1rem;
+        border: 1px solid var(--light-blue);
+        padding: 0.7rem;
+        border-radius: 10px;
+    }
+    .icons {
+        margin-right: 20px;
+    }
+
+    .navbuttons {
+        position: relative;
+        top:25vh;
+        left: 0;
+        /* padding: 1rem 0; */
+    }
+    .button-div-plan {
+        position: relative;
+        bottom: 3rem;
+    }
+    .plan-go-back {
+        position: relative;
+        bottom:2rem;
+    }
+
+    /* ADDONS DOCUMENT */
+    .service p {
+        width: max-content;
+    }
+    /* MOBILE FINISHING DOCUMENT */
+    .finishingbutton{
+        top: 34vh;
+    }
+}
